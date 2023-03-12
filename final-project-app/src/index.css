@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +16,202 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.main-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  padding: 35px 350px;
+  justify-content: space-between;
+}
+
+header img {
+  width: 200px;
+  height: 54px;
+  margin-right: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* MAIN CSS */
+@media (max-width: 700px) {
+  section:first-of-type {
+    background-color: #495E57;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 701px) {
+section:first-of-type {
+  background-color: #495E57;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 350px;
+  gap: 300px;
+}
+}
+
+main section:first-of-type div:first-of-type {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:first-of-type div:first-of-type h1 {
+  font-size: 64px;
+  color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+}
+
+main section:first-of-type div:first-of-type h3 {
+  font-size: 40px;
+  color: white;
+  font-family: 'Markazi Text', serif;
+}
+
+main section:first-of-type div:first-of-type p {
+  font-size: 28px;
+  width: 281px;
+  color: white;
+  font-family: 'Markazi Text', serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main div:first-of-type button {
+  width: 200px;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  background-color: #F4CE14;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main section:first-of-type div:first-of-type button:hover {
+  scale: 0.95;
+}
+
+main section:first-of-type div:last-of-type {
+  width: 400px;
+}
+
+main section:first-of-type div:last-of-type img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: -100px;
+  margin-left: 60px;
+}
+
+/* WEEK SPECIALS SECTION */
+
+section:nth-of-type(2) {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+.week-specials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.week-specials button:hover {
+  scale: 0.95;
+}
+
+.week-specials h2 {
+  font-size: 64px;
+  font-family: 'Markazi Text', serif;
+}
+
+.cards-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.Card {
+  background-color: #EDEFEE;
+  height: 500px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.Card img {
+  width: 100%;
+  height: 263px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.Card .price {
+  color: #EE9972;
+  font-weight: bold;
+}
+
+.dish-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dish-desc {
+  color: #495E57;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.order-delivery {
+  font-weight: bold;
+  margin-top: 20px;
+}
+

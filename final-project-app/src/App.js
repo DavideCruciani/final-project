@@ -2,6 +2,11 @@ import './App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
+import About from './components/About'
+import Menu from './components/Menu';
+import Reservations from './components/Reservations';
+import OrderOnline from './components/OrderOnline';
+import Login from './components/Login';
 import Footer from './components/Footer';
 import Logo from './images/Logo.svg';
 import RestaurantFood from './images/restauranfood.jpg'
@@ -15,6 +20,7 @@ import FourthReviewImg from './images/cr7.jpg'
 import FirstAboutImg from './images/MA1.jpg'
 import SecondAboutImg from './images/MA2.jpg'
 import FooterImg from './images/footer-logo.png'
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -23,7 +29,8 @@ function App() {
       <Header img={Logo}>
         <Nav/>
       </Header>
-      <Main
+      <Routes>
+      <Route path='/' element={<Main 
       img={RestaurantFood}
       cardimg1={FirstCardImg}
       cardimg2={SecondCardImg}
@@ -34,7 +41,14 @@ function App() {
       reviewimg4={FourthReviewImg}
       aboutimg1={FirstAboutImg}
       aboutimg2={SecondAboutImg}
-      ></Main>
+      />} />
+
+      <Route path='/About' element={<About/>}/>
+      <Route path='/Menu' element={<Menu/>}/>
+      <Route path='/Reservations' element={<Reservations/>}/>
+      <Route path='/OrderOnline' element={<OrderOnline/>}/>
+      <Route path='/Login' element={<Login/>}/>
+      </Routes>
       <Footer footerimg={FooterImg}/>
     </>
   );

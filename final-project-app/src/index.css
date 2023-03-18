@@ -65,10 +65,16 @@ nav ul li {
   justify-content: center;
 }
 
-nav ul li a {
+.nav-item {
   font-weight: 500;
   cursor: pointer;
   font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item:active {
+  text-decoration: underline;
 }
 
 /* MAIN CSS */
@@ -392,6 +398,12 @@ footer {
 .rights-reserved {
   color: gray;
   font-size: 16px;
+}
+
+/* EMPTY SECTIONS */
+
+.filler {
+  height: 2000px;
 }
 
 /* MEDIA QUERIES */

@@ -78,7 +78,7 @@ nav ul li {
 }
 
 /* MAIN CSS */
-section:first-of-type {
+.first-section {
   background-color: #495E57;
   padding: 30px;
 }
@@ -104,20 +104,20 @@ section:first-of-type {
   flex-direction: column;
 }
 
-main section:first-of-type .section-center div:first-of-type h1 {
+main .first-section .section-center div:first-of-type h1 {
   font-size: 64px;
   color: #F4CE14;
   font-family: 'Markazi Text', serif;
 }
 
-main section:first-of-type .section-center div:first-of-type h3 {
+main .first-section .section-center div:first-of-type h3 {
   font-size: 40px;
   color: white;
   font-family: 'Markazi Text', serif;
 }
 
-main section:first-of-type .section-center div:first-of-type p {
-  font-size: 28px;
+main .first-section .section-center div:first-of-type p {
+  font-size: 24px;
   width: 281px;
   color: white;
   font-family: 'Markazi Text', serif;
@@ -137,19 +137,19 @@ button {
 }
 
 button:hover {
-  scale: 0.95;
+  background-color: #f49314;
 }
 
-main section:first-of-type div:first-of-type {
+main .first-section div:first-of-type {
   width: 100%;
 }
 
-main section:first-of-type div:last-of-type {
+main .first-section div:last-of-type {
   position: relative;
   width: 100%;
 }
 
-main section:first-of-type div:last-of-type img {
+main .first-section div:last-of-type img {
   position: absolute;
   height: 500px;
   width: 400px;
@@ -283,9 +283,13 @@ section:nth-of-type(3) {
   font-weight: bold;
 }
 
+.review-card div:nth-of-type(3) p {
+  color: #495E57;
+}
+
 /* ABOUT SECTION */
 
-section:last-of-type {
+.last-section {
   padding-top: 80px;
 }
 
@@ -294,12 +298,15 @@ section:last-of-type {
 }
 
 .about-info-container h2 {
-  font-size: 34px;
+  font-size: 64px;
   color: #495E57;
+  font-family: 'Markazi Text', serif;
+  line-height: 0.5;
 }
 
 .about-info-container h4 {
-  font-size: 24px;
+  font-size: 40px;
+  font-family: 'Markazi Text', serif;
 }
 
 .about-info-container p {
@@ -410,7 +417,7 @@ footer {
 
 @media only screen and (min-width: 949px) {
   .review-card:hover {
-    scale: 1.02;
+    scale: 1.05;
   }
 }
 
@@ -473,16 +480,20 @@ footer {
     max-width: 1080px;
   }
 
-  main section:first-of-type div:first-of-type {
+  main .first-section div:first-of-type {
     text-align: center;
   }
   
-  main section:first-of-type .section-center div:first-of-type p {
+  main .first-section .section-center div:first-of-type p {
     width: auto;
   }
 
-  main section:first-of-type div:nth-of-type(2) {
+  main .first-section div:nth-of-type(2) {
     display: none;
+  }
+
+  section:nth-of-type(2) {
+    padding-top: 80px;
   }
 
   .week-specials {
@@ -501,6 +512,10 @@ footer {
     grid-template-rows: 1fr;
   }
 
+  section:nth-of-type(3) {
+    padding-top: 80px;
+  }
+
   .review-card-container {
     display: grid;
     gap: 30px;
@@ -510,6 +525,10 @@ footer {
 
   .about-image-container {
     display: none;
+  }
+
+  footer {
+    margin-top: 50px;
   }
 
   .footer-links-flex {

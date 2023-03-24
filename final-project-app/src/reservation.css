@@ -97,13 +97,43 @@ input[type="radio"]:checked {
 }
 
 .reservation-image1 {
-  width: 500px;
+  width: 45%;
   border-radius: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px;
 }
 
 .reservation-image2 {
-  width: 500px;
+  width: 45%;
   border-radius: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-center-c {
+    text-align: center;
+  }
+
+  .radio-container {
+    justify-content: center;
+  }
+
+  .inputs-container {
+    grid-template-columns: 1fr;
+  }
+
+  .inputs-container input,select {
+    width: 80%;
+  }
+
+  .reservation-image1 {
+    width: 80%;
+  }
+
+  .reservation-image2 {
+    display: none;
+  }
+
+  .reservation-section-2 .section-center {
+    justify-content: center;
+  }
 }

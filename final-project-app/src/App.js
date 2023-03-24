@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Logo from './images/Logo.svg';
 import RestaurantFood from './images/restauranfood.jpg'
 import FirstCardImg from './images/greeksalad.jpg'
-import SecondCardImg from './images/bruchetta.svg'
+import SecondCardImg from './images/bruchetta.jpg'
 import ThirdCardImg from './images/lemondessert.jpg'
 import FirstReviewImg from './images/tyler.jpg'
 import SecondReviewImg from './images/Trunks.PNG'

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Main(props) {
   return (
     <main>
@@ -7,14 +9,16 @@ export default function Main(props) {
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
             <p>We are a family owned Mediterranean restaurant, focused on traditional <br/> recipes served with a modern twist.</p>
-            <button>Reserve a Table</button>
+            <Link to='/Reservations'>
+              <button>Reserve a Table</button>
+            </Link>
           </div>
           <div>
             <img src={props.img} alt="Restaurant food"></img>
           </div>
         </div>
       </section>
-      <section>
+      <section className="second-section">
         <div className="section-center-c">
           <div className="week-specials">
             <h2>This week specials!</h2>
@@ -43,11 +47,11 @@ export default function Main(props) {
             <img src={props.cardimg2}></img>
               <div className="dish-info">
                 <div className="dish-title">
-                  <h4>Greek salad</h4>
-                  <p className="price">$12.99</p>
+                  <h4>Bruchetta</h4>
+                  <p className="price">$5.99</p>
                 </div>
                 <div>
-                  <p className="dish-desc">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+                  <p className="dish-desc">Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
                 </div>
                 <div className="delivery-container">
                   <p className="order-delivery">Order a delivery</p>
@@ -60,11 +64,11 @@ export default function Main(props) {
             <img src={props.cardimg3}></img>
               <div className="dish-info">
                 <div className="dish-title">
-                  <h4>Greek salad</h4>
-                  <p className="price">$12.99</p>
+                  <h4>Lemon Dessert</h4>
+                  <p className="price">$5</p>
                 </div>
                 <div>
-                  <p className="dish-desc">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
+                  <p className="dish-desc">This comes straight from my grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
                 </div>
                 <div className="delivery-container">
                   <p className="order-delivery">Order a delivery</p>
@@ -76,7 +80,7 @@ export default function Main(props) {
           </div>
         </div>
       </section>
-      <section>
+      <section className="third-section">
         <div className="section-center-c">
           <h2 className="testimonial-title">Testimonials</h2>
           <div className="review-card-container">

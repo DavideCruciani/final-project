@@ -1,5 +1,6 @@
 import React, { useState, useReducer } from 'react'
 import BookingForm from './BookinForm'
+import ReservationsImages from './ReservationsImages';
 
 export default function Reservations() {
   const [time, setTime] = useState("Select Time")
@@ -49,6 +50,7 @@ export default function Reservations() {
   }
 
   return (
+    <>
     <section className='reservation-section'>
       <div className='section-center-c'>
         <div>
@@ -59,5 +61,9 @@ export default function Reservations() {
         </div>
       </div>
     </section>
+    <section className='reservation-section-2'>
+      <ReservationsImages />
+    </section>
+    </>
   )
 }

@@ -60,7 +60,7 @@ input[type="radio"]:checked {
   margin-bottom: 10px;
 }
 
-.inputs-container input:focus,select:focus { 
+.inputs-container input:focus,select:focus {
   outline-color: #F4CE14;
   outline-style: solid;
 }
@@ -84,4 +84,26 @@ input[type="radio"]:checked {
 
 .submit-button:hover {
   background-color: #f49314;
+}
+
+.reservation-section-2 {
+  padding-top: 120px;
+  padding-bottom: 0px;
+}
+
+.reservation-images-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation-image1 {
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px;
+}
+
+.reservation-image2 {
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px -7px;
 }

@@ -21,6 +21,7 @@ import FirstAboutImg from './images/MA1.jpg'
 import SecondAboutImg from './images/MA2.jpg'
 import FooterImg from './images/footer-logo.png'
 import { Routes, Route } from 'react-router-dom';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Route path='/About' element={<About/>}/>
       <Route path='/Menu' element={<Menu/>}/>
       <Route path='/Reservations' element={<Reservations/>}/>
+      <Route path='/ConfirmedBooking' element={<ConfirmedBooking/>}/>
       <Route path='/OrderOnline' element={<OrderOnline/>}/>
       <Route path='/Login' element={<Login/>}/>
       </Routes>

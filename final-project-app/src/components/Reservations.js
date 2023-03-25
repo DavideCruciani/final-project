@@ -1,52 +1,33 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, useReducer, useEffect } from 'react'
 import BookingForm from './BookinForm'
 import ReservationsImages from './ReservationsImages';
+import { fetchAPI, submitAPI } from '../apis/apis';
+import { useNavigate } from 'react-router-dom';
+
+export function initializeTimes() {
+  const today = new Date()
+  const todayDay = today.getDate()
+  return fetchAPI(todayDay)
+}
+
+export function updateTimes(state, action) {
+  switch (action.type) {
+    case "UPDATE_TIMES":
+      const { date } = action.payload;
+      return fetchAPI(date.substring(8));
+    default:
+      return state;
+  }
+}
 
 export default function Reservations() {
   const [time, setTime] = useState("Select Time")
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  const navigate = useNavigate();
 
-  function updateTimes(state, action) {
-    switch (action.type) {
-      case "UPDATE_TIMES":
-        const { date } = action.payload;
-        const day = date.substring(8)
-        if (day < 8) {
-          return [
-            '17:00',
-            '18:00',
-            '19:00',
-          ];
-        } else if (day < 15) {
-          return [
-            '20:00',
-            '21:00',
-            '22:00',
-          ];
-        } else {
-          return [
-            '17:00',
-            '18:00',
-            '19:00',
-            '20:00',
-            '21:00',
-            '22:00',
-          ];
-        }
-      default:
-        return state;
-    }
-  }
-
-  function initializeTimes() {
-    return [
-      '17:00',
-      '18:00',
-      '19:00',
-      '20:00',
-      '21:00',
-      '22:00',
-    ];
+  function submitForm(formData) {
+    submitAPI(formData)
+    navigate('/ConfirmedBooking')
   }
 
   return (
@@ -57,7 +38,7 @@ export default function Reservations() {
           <h1 className='reservations-title'>Reservations</h1>
         </div>
         <div>
-          <BookingForm time={time} setTime={setTime} availableTimes={availableTimes} dispatch={dispatch}/>
+          <BookingForm submitForm={submitForm} time={time} setTime={setTime} availableTimes={availableTimes} dispatch={dispatch}/>
         </div>
       </div>
     </section>

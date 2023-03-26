@@ -73,6 +73,11 @@ nav ul li {
   color: black;
 }
 
+.nav-item.active {
+  text-decoration: underline #F4CE14;
+  font-size: 24px;
+}
+
 .nav-item:active {
   text-decoration: underline;
 }

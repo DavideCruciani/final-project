@@ -7,10 +7,10 @@ export default function ConfirmedBooking() {
     <section className='reservation-section'>
       <div className='section-center-c'>
         <div>
-          <h1 className='reservations-title'>Reservations Confirmed</h1>
+          <h1 className='reservations-title'>Reservation Confirmed</h1>
         </div>
         <div>
-          <p>Well Done!!!</p>
+          <p className='congratulations'>Congratulations on securing your reservation at Little Lemon, the Mediterranean restaurant known for its delicious and authentic cuisine! We're excited to have you join us for what promises to be a truly memorable dining experience.</p>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Main(props) {
   return (
@@ -9,9 +9,9 @@ export default function Main(props) {
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
             <p>We are a family owned Mediterranean restaurant, focused on traditional <br/> recipes served with a modern twist.</p>
-            <Link to='/Reservations'>
+            <NavLink to='/Reservations'>
               <button>Reserve a Table</button>
-            </Link>
+            </NavLink>
           </div>
           <div>
             <img src={props.img} alt="Restaurant food"></img>
@@ -27,7 +27,7 @@ export default function Main(props) {
           <div className="cards-container">
 
             <article className="Card">
-              <img src={props.cardimg1}></img>
+              <img src={props.cardimg1} alt='a Greek salad'></img>
               <div className="dish-info">
                 <div className="dish-title">
                   <h4>Greek salad</h4>
@@ -44,7 +44,7 @@ export default function Main(props) {
             </article>
 
             <article className="Card">
-            <img src={props.cardimg2}></img>
+            <img src={props.cardimg2} alt='a Bruchetta'></img>
               <div className="dish-info">
                 <div className="dish-title">
                   <h4>Bruchetta</h4>
@@ -61,7 +61,7 @@ export default function Main(props) {
             </article>
 
             <article className="Card">
-            <img src={props.cardimg3}></img>
+            <img src={props.cardimg3} alt='a Lemon Dessert'></img>
               <div className="dish-info">
                 <div className="dish-title">
                   <h4>Lemon Dessert</h4>
@@ -89,7 +89,7 @@ export default function Main(props) {
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
               <div className="photo-name">
-                <div><img src={props.reviewimg1} className="reviewimg1"></img></div>
+                <div><img src={props.reviewimg1} alt='the reviewer image' className="reviewimg1"></img></div>
                 <div><p>Michael</p></div>
               </div>
               <div>
@@ -101,7 +101,7 @@ export default function Main(props) {
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
               <div className="photo-name">
-                <div><img src={props.reviewimg2} className="reviewimg1"></img></div>
+                <div><img src={props.reviewimg2} alt='the reviewer image' className="reviewimg1"></img></div>
                 <div><p>John</p></div>
               </div>
               <div>
@@ -113,7 +113,7 @@ export default function Main(props) {
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
               <div className="photo-name">
-                <div><img src={props.reviewimg3} className="reviewimg1"></img></div>
+                <div><img src={props.reviewimg3} alt='the reviewer image' className="reviewimg1"></img></div>
                 <div><p>Carlo</p></div>
               </div>
               <div>
@@ -125,7 +125,7 @@ export default function Main(props) {
                 <p>⭐⭐⭐⭐⭐</p>
               </div>
               <div className="photo-name">
-                <div><img src={props.reviewimg4} className="reviewimg1"></img></div>
+                <div><img src={props.reviewimg4} alt='the reviewer image' className="reviewimg1"></img></div>
                 <div><p>James</p></div>
               </div>
               <div>
@@ -147,8 +147,8 @@ export default function Main(props) {
             </div>
           </div>
           <div className="about-image-container">
-            <img src={props.aboutimg1} className="about-image1"></img>
-            <img src={props.aboutimg2} className="about-image2"></img>
+            <img src={props.aboutimg1} alt='the 2 founders of the restaurant cooking' className="about-image1"></img>
+            <img src={props.aboutimg2} alt='the 2 founders of the restaurant cooking' className="about-image2"></img>
           </div>
         </div>
       </section>

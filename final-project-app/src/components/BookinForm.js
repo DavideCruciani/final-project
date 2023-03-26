@@ -14,8 +14,7 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    var today = new Date();
-    if (location === "" || guests === "" || occasion === "" || date === "Select Occasion" || time === "Select Time" || date < today) {
+    if (location === "" || guests === "" || occasion === "" || date === "Select Occasion" || time === "Select Time") {
       return
     } else {
     submitForm(location, guests, occasion, date, time)
@@ -76,7 +75,7 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
                 <div>
                 <select id="res-time" name="time" value={time} required onChange={e => setTime(e.target.value)}>
                   <option value="">Select Time</option>
-                  {availableTimes.map((availableTime) => (
+                  {availableTimes && availableTimes.map((availableTime) => (
                     <option key={availableTime} value={availableTime}>
                       {availableTime}
                     </option>
@@ -87,7 +86,7 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
 
             </div>
             <div className='submit-container'>
-            <input type="submit" value="Make Your reservation" required className='submit-button'></input>
+            <input type="submit" value="Make Your reservation" data-testid="submit-button" required className='submit-button'></input>
             </div>
           </form>
   )

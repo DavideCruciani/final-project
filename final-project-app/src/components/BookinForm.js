@@ -14,12 +14,17 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    var today = new Date();
+    if (location === "" || guests === "" || occasion === "" || date === "Select Occasion" || time === "Select Time" || date < today) {
+      return
+    } else {
     submitForm(location, guests, occasion, date, time)
     setLocation("")
     setDate("")
     setGuests("")
     setOccasion("Select Occasion")
     setTime("Select Time")
+    }
   }
 
   return (
@@ -43,7 +48,7 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
               <div>
                 <label htmlFor='res-date' className='inputs-label'>Date</label>
                 <div>
-                  <input type="date" id='res-date' required value={date} onChange={handleChange}/>
+                  <input type="date" id='res-date' required value={date} onChange={handleChange} min={new Date().toISOString().split("T")[0]}/>
                 </div>
               </div>
 
@@ -57,8 +62,8 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
               <div>
                 <label htmlFor="occasion" className='inputs-label'>Occasion</label>
                 <div>
-                  <select id="occasion" value={occasion} required onChange={e => setOccasion(e.target.value)}>
-                      <option disabled>Select Occasion</option>
+                  <select id="occasion" name="occasion" value={occasion} required onChange={e => setOccasion(e.target.value)}>
+                      <option value="">Select Occasion</option>
                       <option value="Birthday">Birthday</option>
                       <option value="Anniversary">Anniversary</option>
                       <option value="Engagment">Engagment</option>
@@ -69,8 +74,8 @@ export default function BookingForm({ time, setTime, availableTimes, dispatch, s
               <div>
                 <label htmlFor="res-time" className='inputs-label'>Choose time</label>
                 <div>
-                <select id="res-time" value={time} required onChange={e => setTime(e.target.value)}>
-                  <option disabled>Select Time</option>
+                <select id="res-time" name="time" value={time} required onChange={e => setTime(e.target.value)}>
+                  <option value="">Select Time</option>
                   {availableTimes.map((availableTime) => (
                     <option key={availableTime} value={availableTime}>
                       {availableTime}
